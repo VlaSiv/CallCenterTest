@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app-container {
+    @apply min-h-screen bg-gray-50 text-gray-900 font-sans;
+  }
+  .app-header {
+    @apply bg-blue-600 text-white p-4 shadow;
+  }
+  .app-title {
+    @apply text-xl font-bold;
+  }
+
+  /* Grid Components */
+  .grid-container {
+    @apply p-4 flex flex-col h-screen max-h-screen;
+  }
+  .grid-toolbar {
+    @apply mb-4 flex gap-4 items-center;
+  }
+  .search-input {
+    @apply border p-2 rounded w-64;
+  }
+  .loading-text {
+    @apply text-gray-500;
+  }
+  .total-count {
+    @apply ml-auto;
+  }
+  
+  /* Table */
+  .table-wrapper {
+    @apply border rounded flex-1 overflow-auto relative;
+  }
+  .data-table {
+    @apply w-full text-left border-collapse;
+  }
+  .table-thead {
+    @apply sticky top-0 bg-white shadow z-10;
+  }
+  .table-th {
+    @apply p-2 border-b font-bold cursor-pointer hover:bg-gray-100 select-none;
+  }
+  .table-row {
+    @apply hover:bg-gray-50;
+  }
+  .table-cell {
+    @apply p-2 border-b truncate;
+  }
+  .no-results {
+    @apply p-4 text-center text-gray-500;
+  }
+
+  /* Pagination */
+  .pagination-bar {
+    @apply mt-4 flex items-center gap-2;
+  }
+  .pagination-btn {
+    @apply border p-1 px-2 rounded disabled:opacity-50 hover:bg-gray-100 disabled:hover:bg-transparent;
+  }
+  .page-info {
+    @apply flex items-center gap-1;
+  }
+  .page-size-select {
+    @apply border p-1 rounded;
+  }
+}
